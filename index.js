@@ -58,3 +58,11 @@ do {
     console.log(y)
     y++
 }while(y<=10)
+
+let myobj = {
+    id:"001",
+    firstname:"Aron",
+    display: function(){
+        console.log(this.firstname)
+    }
+}
