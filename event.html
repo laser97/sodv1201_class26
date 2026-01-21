@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM event</title>
+</head>
+<body>
+    <button id="btn" class="btn">Click me</button>
+    <button id="btn" class="btn1">Click me</button>
+    <button id="btn">Click me</button>
+    <button id="btn">Click me</button>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const button = document.querySelectorAll("#btn")
+        console.log(button);
+
+        button.forEach(btn =>{
+            btn.addEventListener('click', function(){
+                btn.style.background="red"
+            })
+        })
+        function display(){
+            console.log("Hello class")
+        }
+        function greet(){
+            console.log("Hello this is the class of week 3")
+        }
+
+        // btn.onclick = function(){
+        //     console.log("Hello class")
+        // }
+        // btn.onclick = function(){
+        //     console.log("Hello this is the class of week 3")
+        // }
+
+
+        btn.addEventListener('click', function(){
+            console.log("Hello class");
+        });
+        btn.addEventListener('click', function(){
+            console.log("Hello this is the class of week 3");
+        });
+
+        // js object
+        const myobj = new Object()
+        let employee = {
+            id:"001",
+            firstname:"Alex",
+            lastname:"Sam",
+            displayFullname: function(){
+                console.log(this.id + " " + this.firstname +  " " + this.lastname) //back tick `fullname ${firstname}`
+                console.log(`Full information ${this.id} ${this.firstname} ${this.lastname}`)
+
+            }
+        }
+
+        employee.displayFullname();
+        console.log(employee.firstname)
+
+        let age = 18
+        try{
+            if(age>18){
+                console.log("You can vote")
+            }else{
+                console.log("You can't vote")
+            }
+
+        }catch(e){
+            console.log("Error happened" + e.message)
+
+        }finally{
+            console.log("vote app exe")
+        }
+    </script>
+</body>
+</html>
